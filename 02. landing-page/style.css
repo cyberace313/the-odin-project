@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "roboto", sans-serif;
+}
+
+/* HEADER SECTION */
+.header-container {
+  background-color: #1f2927;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 200px;
+  padding-top: 36px;
+}
+
+ul {
+  display: flex;
+  gap: 50px;
+  list-style: none;
+  margin-top: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: #3882f6;
+}
+
+h1 {
+  color: white;
+}
+
+/* HERO SECTION */
+
+.hero-container {
+  background-color: #1f2927;
+  color: white;
+}
+
+#hero {
+  display: flex;
+  padding: 100px 200px;
+  gap: 200px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.content h1 {
+  font-size: 48px;
+  color: #f9faf8;
+}
+
+#hero-btn {
+  padding: 15px 40px;
+  font-size: 14px;
+  background-color: #3882f6;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  width: 30%;
+}
+
+.img-container img {
+  height: 350px;
+  width: 600px;
+  border-radius: 10px;
+}
+
+/* RANDOM INFO SECTION */
+
+.info-container {
+  padding: 50px 0 120px;
+  background-color: white;
+}
+
+#info h1 {
+  font-size: 36px;
+  font-weight: bolder;
+  color: #1f2937;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+#info .info-img-container {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+.image img {
+  height: 200px;
+  width: 200px;
+  border: 5px solid #3882f6;
+  border-radius: 20px;
+}
+
+.image p {
+  width: 200px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+/* QUOTE SECTION */
+
+.quote-section {
+  background-color: #e5e7eb;
+  padding: 150px 400px;
+}
+
+blockquote {
+  font-size: 30px;
+  font-weight: light;
+  font-style: italic;
+  color: #1f2937;
+  line-height: 1.8;
+}
+
+figcaption {
+  font-weight: bold;
+  font-size: 20px;
+  font-style: normal;
+  margin-left: 700px;
+}
+
+/* CALL TO ACTION SECTION */
+
+.call-to-action {
+  background-color: white;
+  padding: 100px 200px;
+}
+
+.box {
+  background-color: #3882f6;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 200px;
+  border-radius: 10px;
+}
+
+#call-to-action-btn {
+  background-color: #3882f6;
+  border: 2px solid white;
+  border-radius: 10px;
+  color: white;
+  padding: 8px 60px;
+  font-size: 26px;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: #1f2927;
+  padding: 50px;
+  color: white;
+  text-align: center;
+  font-weight: lighter;
+  font-size: 26px;
+}
