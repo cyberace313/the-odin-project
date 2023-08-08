@@ -1,3 +1,17 @@
+function getComputerChoice() {
+  let choicesArray = ["rock", "paper", "scissor"];
+  let randomIndex = Math.floor(Math.random() * choicesArray.length);
+  let choice = choicesArray[randomIndex];
+  return choice;
+}
+
+const rock = document.getElementById("rock");
+const paper = document.getElementById("paper");
+const scissor = document.getElementById("scissor");
+
+const userScore = document.getElementById("user-score");
+const computerScore = document.getElementById("computer-score");
+
 game();
 
 function round(playerSelection, computerSelection) {
@@ -49,13 +63,6 @@ function game() {
   for (let i = 1; i < 5; i++) {
     let userChoice = prompt("Please input an option from rock-paper-scissor");
     let finalChoice = userChoice.toLowerCase();
-
-    function getComputerChoice() {
-      let choicesArray = ["rock", "paper", "scissor"];
-      let randomIndex = Math.floor(Math.random() * choicesArray.length);
-      let choice = choicesArray[randomIndex];
-      return choice;
-    }
 
     let playerSelection = finalChoice;
     const computerSelection = getComputerChoice();

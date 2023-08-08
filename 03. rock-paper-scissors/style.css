@@ -12,6 +12,7 @@ body {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  font-family: "roboto", sans-serif;
 }
 
 h1 {
@@ -34,6 +35,10 @@ i {
   cursor: pointer;
 }
 
+i:active {
+  transform: scale(0.98);
+}
+
 .play-btn {
   background-color: #91c8e4;
   font-size: 30px;
@@ -42,4 +47,24 @@ i {
   border: none;
   border-radius: 10px;
   cursor: pointer;
+}
+
+.play-btn:active {
+  transform: scale(0.98);
+}
+
+h2 {
+  color: #f6f4eb;
+}
+
+.scores {
+  display: flex;
+  color: #f6f4eb;
+  font-family: inherit;
+  gap: 100px;
+}
+
+.score {
+  border: 1px solid #f6f4eb;
+  padding: 10px 50px;
 }
