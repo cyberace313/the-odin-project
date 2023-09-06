@@ -73,7 +73,6 @@ h2 {
 
 #message-el {
   color: orange;
-  font-weight: bold;
   font-size: 1.2rem;
   text-align: center;
   height: 40px;
@@ -82,4 +81,15 @@ h2 {
 .choice {
   color: white;
   width: 200px;
+}
+
+.reset-btn {
+  height: 30px;
+  width: 100px;
+  color: #102c57;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
 }
