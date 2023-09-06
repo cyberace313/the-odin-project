@@ -17,17 +17,29 @@
   <body>
     <h1>Rock-Paper-Scissors</h1>
 
+    <!-- Choices section -->
     <div class="selections">
+      <div id="your-choice" class="choice">Your Choice:</div>
+
       <i id="rock" class="fa-solid fa-hand-back-fist"></i>
       <i id="paper" class="fa-solid fa-hand"></i>
       <i id="scissor" class="fa-solid fa-hand-scissors"></i>
+
+      <div id="computer-choice" class="choice">Computer Choice:</div>
     </div>
 
-    <p class="message-el" id="message-el"></p>
+    <!-- Message section -->
+    <p class="message-el" id="message-el">
+      Click on one of the choices to start the game!<br />
+      First to reach 5 points wins the game.
+    </p>
+
+    <!-- scores section -->
     <h2>Scores</h2>
     <div class="scores">
-      <p id="user-score" class="score">You:</p>
-      <p id="computer-score" class="score">Computer:</p>
+      <p id="user-score" class="score">Player: 0</p>
+
+      <p id="computer-score" class="score">Computer: 0</p>
     </div>
     <script src="script.js"></script>
   </body>
