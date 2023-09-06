@@ -15,10 +15,9 @@ let gameEnded = false;
 
 //Functions:
 
-resetBtn.addEventListener('click', () => {
-  
-})
-
+resetBtn.addEventListener("click", () => {
+  window.location.reload();
+});
 
 function setMessage(message) {
   messageEl.textContent = message;
