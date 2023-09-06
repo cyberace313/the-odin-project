@@ -1,72 +1,21 @@
+//Element Selection
 const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
 const scissor = document.getElementById("scissor");
 
-let userScore = document.getElementById("user-score");
-let computerScore = document.getElementById("computer-score");
-let messageEl = document.getElementsByClassName("message-el");
+const userScoreEl = document.getElementById("user-score");
+const computerScoreEl = document.getElementById("computer-score");
+const messageEl = document.getElementById("message-el");
 
-// Eventlisternes:
+//Starting position:
 
 let userChoice = "";
+let computerChoice = "";
+let message = "";
+let playerScore = 0;
+let computerScore = 0;
 
-rock.addEventListener("click", () => {
-  userChoice = "rock";
-  getComputerChoice();
-  game();
-});
-
-paper.addEventListener("click", () => {
-  userChoice = "paper";
-  getComputerChoice();
-  game();
-});
-
-scissor.addEventListener("click", () => {
-  userChoice = "scissor";
-  getComputerChoice();
-  game();
-});
-
-function round(playerSelection, computerSelection) {
-  let message = "";
-  let playerScore = 0;
-  let pcScore = 0;
-  if (playerSelection == "rock" && computerSelection == "rock") {
-    message = "Stalmate! Repeat!";
-    messageEl.textContent = message;
-  } else if (playerSelection == "rock" && computerSelection == "paper") {
-    message = "You Lose! Paper beats rock.";
-    messageEl.textContent = message;
-    computerScore += 1;
-  } else if (playerSelection == "rock" && computerSelection == "scissor") {
-    message = "You Win! Rock beats scissor";
-    messageEl.textContent = message;
-    playerScore += 1;
-  } else if (playerSelection == "paper" && computerSelection == "rock") {
-    message = "You win! Paper beats rock.";
-    playerScore += 1;
-    messageEl.textContent = message;
-  } else if (playerSelection == "paper" && computerSelection == "paper") {
-    message = "Stalemate! Repeat!";
-    messageEl.textContent = message;
-  } else if (playerSelection == "paper" && computerSelection == "scissor") {
-    message = "You lose! Scissor beats paper";
-    pcScore += 1;
-    messageEl.textContent = message;
-  } else if (playerSelection == "scissor" && computerSelection == "rock") {
-    message = "You lose! Rock beats scissor";
-    pcScore += 1;
-    messageEl.textContent = message;
-  } else if (playerSelection == "scissor" && computerSelection == "paper") {
-    message = "You win! Scissor beats paper";
-    playerScore += 1;
-    messageEl.textContent = message;
-  } else if (playerSelection == "scissor" && computerSelection == "scissor") {
-    message = "Stalemate! Repeat";
-    messageEl.textContent = message;
-  }
-}
+//Functions:
 
 function game() {
   let playerSelection = userChoice;
@@ -78,6 +27,64 @@ function game() {
 function getComputerChoice() {
   let choicesArray = ["rock", "paper", "scissor"];
   let randomIndex = Math.floor(Math.random() * choicesArray.length);
-  let choice = choicesArray[randomIndex];
-  return choice;
+  let computerChoice = choicesArray[randomIndex];
+  return computerChoice;
 }
+
+function round(playerSelection, computerSelection) {
+  if (playerSelection === "rock" && computerSelection === "rock") {
+    message = "Stalmate! Repeat!";
+    messageEl.textContent = message;
+  } else if (playerSelection === "rock" && computerSelection === "paper") {
+    message = "You Lose! Paper beats rock.";
+    messageEl.textContent = message;
+    computerScore += 1;
+    computerScoreEl.textContent = computerScore;
+  } else if (playerSelection === "rock" && computerSelection === "scissor") {
+    message = "You Win! Rock beats scissor";
+    messageEl.textContent = message;
+    playerScore += 1;
+    userScoreEl.textContent = playerScore;
+  } else if (playerSelection == "paper" && computerSelection == "rock") {
+    message = "You win! Paper beats rock.";
+    messageEl.textContent = message;
+    playerScore += 1;
+    userScoreEl.textContent = playerScore;
+  } else if (playerSelection == "paper" && computerSelection == "paper") {
+    message = "Stalemate! Repeat!";
+    messageEl.textContent = message;
+  } else if (playerSelection == "paper" && computerSelection == "scissor") {
+    message = "You lose! Scissor beats paper";
+    messageEl.textContent = message;
+    computerScore += 1;
+    computerScoreEl.textContent = computerScore;
+  } else if (playerSelection == "scissor" && computerSelection == "rock") {
+    message = "You lose! Rock beats scissor";
+    messageEl.textContent = message;
+    computerScore += 1;
+    computerScoreEl.textContent = computerScore;
+  } else if (playerSelection == "scissor" && computerSelection == "paper") {
+    message = "You win! Scissor beats paper";
+    messageEl.textContent = message;
+    playerScore += 1;
+    userScoreEl.textContent = playerScore;
+  } else if (playerSelection == "scissor" && computerSelection == "scissor") {
+    message = "Stalemate! Repeat";
+    messageEl.textContent = message;
+  }
+}
+
+rock.addEventListener("click", () => {
+  userChoice = "rock";
+  game();
+});
+
+paper.addEventListener("click", () => {
+  userChoice = "paper";
+  game();
+});
+
+scissor.addEventListener("click", () => {
+  userChoice = "scissor";
+  game();
+});
