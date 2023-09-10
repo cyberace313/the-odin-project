@@ -1,21 +1,73 @@
+:root {
+  --background-color: #213555;
+  --primary-color: #f0f0f0;
+  --heading-color: #e5d283;
+  --secondary-color: #4f709c;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-.grid-container {
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: var(--background-color);
+  height: 100vh;
+}
+
+i {
+  color: var(--primary-color);
+  border-radius: 50%;
+  font-size: 1.2rem;
+  padding: 20px;
+  background-color: #277589;
+}
+
+h1 {
+  margin: 20px;
+  text-align: center;
+  color: #66c6de;
+}
+
+.toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid #277589;
+  border-radius: 50px;
+  padding: 20px 5px;
+}
+
+.container {
+  display: flex;
+  margin: 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+
+.grid {
   display: grid;
   grid-template-columns: repeat(16, 1fr);
-  margin: 50px auto;
   grid-gap: 0;
   width: 300px;
 }
 
 .box {
-  background-color: black;
-  border: 0.1px solid #fff;
+  background-color: var(--primary-color);
   height: 20px;
   width: 20px;
 }
 
+.black-dot {
+  background-color: black;
+}
+
+/* Toolbar selected Style */
+
+.selected {
+  background-color: var(--heading-color);
+  color: var(--background-color);
+}
