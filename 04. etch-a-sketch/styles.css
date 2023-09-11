@@ -15,6 +15,7 @@ body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   background-color: var(--background-color);
   height: 100vh;
+  overflow: hidden;
 }
 
 i {
@@ -33,9 +34,19 @@ h1 {
 
 h2 {
   color: #66c6de;
+  margin-right: 20px;
+}
+
+h3 {
+  color: #66c6de;
+}
+
+span {
+  color: #4f709c;
 }
 
 .toolbar {
+  align-self: flex-start;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -54,7 +65,7 @@ h2 {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(10, 1fr);
   grid-gap: 0;
   width: 300px;
 }
@@ -81,6 +92,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 20px;
 }
 
 .range {

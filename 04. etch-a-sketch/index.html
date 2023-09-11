@@ -16,30 +16,36 @@
   <body>
     <h1>Etch a Sketch</h1>
     <div class="container">
+      <!-- Toolbar -->
       <div class="toolbar">
         <i id="pen" class="fa-solid fa-pen"></i>
         <i id="eraser" class="fa-solid fa-eraser"></i>
         <i id="clear" class="fa-solid fa-delete-left"></i>
         <i id="color-picker" class="fa-solid fa-palette"></i>
       </div>
+
+      <!-- Grid -->
       <div class="grid-container">
         <div class="grid"></div>
-        <h2 class="dimensions">16x16</h2>
+        <h3 class="dimensions">16x16</h3>
       </div>
     </div>
+
+    <!-- Range Container -->
     <div class="range-container">
-      <h2>Grid Size</h2>
-      <span>10</span
+      <h2>Grid Size:</h2>
+      <span>15x10</span
       ><input
         id="range"
         class="range"
         name="range"
         type="range"
         min="10"
-        max="30"
+        max="50"
       />
+      <span>15x50</span>
     </div>
-    <span>50</span>
+
     <script src="script.js"></script>
   </body>
 </html>

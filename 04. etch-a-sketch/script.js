@@ -8,14 +8,16 @@ const clear = document.getElementById("clear");
 const range = document.getElementById("range");
 const dimensions = document.querySelector(".dimensions");
 
-dimensions.textContent = `${range.value}x${range.value}`;
-console.log(range.value);
-grid.style.gridTemplateColumns = `repeat(${range.value}, 1fr)`;
+// dimensions.textContent = `${range.value}x${range.value}`;
+// console.log(range.value);
+// grid.style.gridTemplateColumns = `repeat(${range.value}, 1fr)`;
+const rowNum = 15;
 
+dimensions.textContent = `${rowNum}x${range.value}`;
 let penSelected = false;
 let eraserSelected = false;
 
-// grid.style.gridTemplateColumns = `repeat(${num}, 1fr)`;
+grid.style.gridTemplateColumns = `repeat(${range.value}, 1fr)`;
 start();
 
 pen.addEventListener("click", () => {
@@ -34,7 +36,7 @@ eraser.addEventListener("click", () => {
 });
 
 function start() {
-  for (let i = 0; i < range.value ** 2; i++) {
+  for (let i = 0; i < rowNum * range.value; i++) {
     let boxDiv = document.createElement("div"); // Create a new div element for each iteration
     boxDiv.classList.add("box");
 
