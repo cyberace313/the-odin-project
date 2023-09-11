@@ -8,17 +8,23 @@ const clear = document.getElementById("clear");
 const range = document.getElementById("range");
 const dimensions = document.querySelector(".dimensions");
 
-// dimensions.textContent = `${range.value}x${range.value}`;
-// console.log(range.value);
-// grid.style.gridTemplateColumns = `repeat(${range.value}, 1fr)`;
-const rowNum = 15;
-
-dimensions.textContent = `${rowNum}x${range.value}`;
 let penSelected = false;
 let eraserSelected = false;
+range.value = 15;
+const rowNum = 15;
 
-grid.style.gridTemplateColumns = `repeat(${range.value}, 1fr)`;
+// ///////////////////////////////////////////////////////
 start();
+
+range.addEventListener("input", () => {
+  dimensions.textContent = `${rowNum}x${range.value}`;
+
+  grid.style.gridTemplateColumns = `repeat(${range.value}, 1fr)`;
+  start();
+
+  clearGrid();
+  start();
+});
 
 pen.addEventListener("click", () => {
   pen.classList.add("selected");
@@ -49,5 +55,11 @@ function start() {
     });
 
     grid.appendChild(boxDiv);
+  }
+}
+
+function clearGrid() {
+  while (grid.firstChild) {
+    grid.removeChild(grid.firstChild);
   }
 }
