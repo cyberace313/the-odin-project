@@ -43,7 +43,7 @@ eraser.addEventListener("click", () => {
 
 function start() {
   for (let i = 0; i < rowNum * range.value; i++) {
-    let boxDiv = document.createElement("div"); // Create a new div element for each iteration
+    let boxDiv = document.createElement("div");
     boxDiv.classList.add("box");
 
     boxDiv.addEventListener("click", () => {
