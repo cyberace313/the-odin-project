@@ -16,15 +16,24 @@ body {
   display: flex;
 }
 
-.layout-grid {
-  display: grid;
-  grid-template-columns: 20% 80%;
-}
-
-.grid-item1 {
+nav {
   background-color: var(--primary-color);
   color: #fff;
   padding: 20px 30px;
+  width: 20%;
+  height: 100vh;
+}
+
+header {
+  background-color: #fff;
+  color: #000;
+  height: 120px;
+  width: 100%;
+  -webkit-box-shadow: 0px 8px 24px -13px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 8px 24px -13px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 8px 24px -13px rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
 }
 
 ul {
@@ -47,44 +56,32 @@ i {
 
 /* Header section */
 
-header {
-  background-color: #fff;
-  color: #000;
-  height: 150px;
+.search-icon {
+  margin-right: 20px;
+}
+
+.main-container {
   width: 80%;
-  -webkit-box-shadow: 0px 8px 24px -13px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 8px 24px -13px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 8px 24px -13px rgba(0, 0, 0, 0.75);
+  height: 100vh;
 }
 
 .content {
   display: flex;
-  padding: 20px 50px;
+  padding: 20px;
   font-size: 26px;
   justify-content: space-between;
 }
 
-.info {
-  display: flex;
-  font-size: 16px;
-}
-
-.fa-user {
-  font-size: 20px;
-  cursor: pointer;
-  margin-top: 5px;
-}
-
-#search {
+.content #search {
   border-radius: 50px;
   background-color: #bbd5ee;
   border: none;
-  padding: 10px;
+  padding: 10px 30px;
   width: 600px;
   font-size: 15px;
 }
 
-#search:focus {
+.content #search:focus {
   border: none;
   outline: none;
 }
@@ -93,17 +90,31 @@ header {
   display: flex;
   gap: 50px;
   left: 35%;
+  margin: 0 auto;
 }
 
-.btn {
+.buttons button {
   padding: 12px 40px;
   border-radius: 50px;
   border: none;
   background-color: #3081d0;
   color: white;
+  cursor: pointer;
+  transition: transform 0.1s ease-in;
 }
 
-#main {
-  width: 300px;
-  height: 150px;
+.buttons button:active {
+  transform: scale(0.9);
+  background-color: #599bdd;
+}
+
+.info {
+  display: flex;
+  font-size: 16px;
+}
+
+.info .profile-icon {
+  font-size: 20px;
+  margin-left: 10px;
+  margin-top: 5px;
 }
