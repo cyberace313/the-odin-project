@@ -116,5 +116,64 @@ i {
 .info .profile-icon {
   font-size: 20px;
   margin-left: 10px;
-  margin-top: 5px;
+  margin-top: 10px;
+}
+
+main {
+  display: flex;
+}
+
+/* Grid */
+
+.grid-container {
+  margin-top: 20px;
+  padding: 20px;
+  width: 70%;
+  display: grid;
+  gap: 50px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.grid-item1 {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 30px 20px;
+  border-radius: 10px;
+  border-left: 10px solid orange;
+}
+
+.grid-item1 .icons {
+  margin: 10px auto 0;
+  padding-top: 20px;
+}
+
+.side-section {
+  margin-top: 20px;
+  width: 30%;
+}
+
+.item1 {
+  padding: 20px;
+  height: 50%;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item2 {
+  padding: 20px;
+  height: 42%;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.item1,
+.item2 {
+  border-left: 10px solid #3081d0;
 }
