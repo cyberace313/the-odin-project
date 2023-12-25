@@ -14,55 +14,66 @@
     />
   </head>
   <body>
-    <!-- Navigation -->
-    <nav>
-      <h1><i class="fa-solid fa-gauge"></i>Dashboard</h1>
-      <ul class="User-related">
-        <li><i class="fa-solid fa-house"></i>Home</li>
-        <li><i class="fa-solid fa-user"></i>Profile</li>
-        <li><i class="fa-solid fa-message"></i>Message</li>
-        <li><i class="fa-solid fa-clock"></i>History</li>
-        <li><i class="fa-solid fa-list-check"></i>Tasks</li>
-        <li><i class="fa-solid fa-users"></i>Comunities</li>
-      </ul>
+    <div id="layout-grid">
+      <!-- Navigation -->
+      <nav class="grid-item1">
+        <h1><i class="fa-solid fa-gauge"></i>Dashboard</h1>
+        <ul class="User-related">
+          <li><i class="fa-solid fa-house"></i>Home</li>
+          <li><i class="fa-solid fa-user"></i>Profile</li>
+          <li><i class="fa-solid fa-message"></i>Message</li>
+          <li><i class="fa-solid fa-clock"></i>History</li>
+          <li><i class="fa-solid fa-list-check"></i>Tasks</li>
+          <li><i class="fa-solid fa-users"></i>Comunities</li>
+        </ul>
 
-      <ul class="app-related">
-        <li><i class="fa-solid fa-gear"></i>Settings</li>
-        <li><i class="fa-solid fa-shield-halved"></i>Privacy</li>
-        <li><i class="fa-solid fa-circle-info"></i>Support</li>
-      </ul>
-    </nav>
-    <!-- Navigation -->
+        <ul class="app-related">
+          <li><i class="fa-solid fa-gear"></i>Settings</li>
+          <li><i class="fa-solid fa-shield-halved"></i>Privacy</li>
+          <li><i class="fa-solid fa-circle-info"></i>Support</li>
+        </ul>
+      </nav>
+      <!-- Navigation -->
 
-    <!-- Header -->
-    <header>
-      <div class="content">
-        <div class="search-box">
-          <label for="search"
-            ><i class="fa-solid fa-magnifying-glass"></i
-          ></label>
-          <input type="text" id="search" name="serach" />
+      <!-- Header -->
+      <header class="grid-item2">
+        <div class="content">
+          <div class="search-box">
+            <label for="search"
+              ><i class="fa-solid fa-magnifying-glass"></i
+            ></label>
+            <input type="text" id="search" name="serach" />
+          </div>
+          <div class="info">
+            <i class="fa-solid fa-bell"></i>
+            <i class="fa-solid fa-user"></i>
+            <h2>Magnus Carlsen</h2>
+          </div>
         </div>
-        <div class="info">
-          <i class="fa-solid fa-user"></i>
-          <h2>Magnus Carlsen</h2>
+
+        <div class="buttons">
+          <button class="btn" type="submit" id="new">New</button>
+          <button class="btn" type="submit" id="upload">Upload</button>
+          <button class="btn" type="submit" id="share">Share</button>
         </div>
-      </div>
+      </header>
 
-      <div class="buttons">
-        <button class="btn" type="submit" id="new">New</button>
-        <button class="btn" type="submit" id="upload">Upload</button>
-        <button class="btn" type="submit" id="share">Share</button>
-      </div>
-    </header>
+      <main id="main" class="grid-item3">
+        <div class="item">
+          <h3>Super Cool Projects</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt
+            cupiditate, totam minus nulla sapiente officia aperiam dolor laborum
+            corrupti ad.
+          </p>
 
-    <main id="main">
-      <div class="item">
-        <h3>Super Cool Projects</h3>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt cupiditate, totam minus nulla sapiente officia aperiam dolor laborum corrupti ad repellat animi placeat incidunt et illum nemo esse sed! Veritatis?</p>
-
-        <div class="icons"></div>
-      </div>
-    </main>
+          <div class="icons">
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-solid fa-share-nodes"></i>
+            <i class="fa-regular fa-eye"></i>
+          </div>
+        </div>
+      </main>
+    </div>
   </body>
 </html>

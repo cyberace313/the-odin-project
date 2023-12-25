@@ -16,9 +16,12 @@ body {
   display: flex;
 }
 
-nav {
-  width: 20%;
-  height: 100vh;
+.layout-grid {
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+.grid-item1 {
   background-color: var(--primary-color);
   color: #fff;
   padding: 20px 30px;
@@ -98,4 +101,9 @@ header {
   border: none;
   background-color: #3081d0;
   color: white;
+}
+
+#main {
+  width: 300px;
+  height: 150px;
 }
