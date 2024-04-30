@@ -39,23 +39,19 @@ function round(playerSelection) {
   userChoiceDisplay.textContent = `Your Choice: ${playerSelection}`;
 
   if (playerSelection === computerSelection) {
-    setMessage("Stalmate! Repeat!");
-  } else if (
-    (playerSelection === "rock" && computerSelection === "paper") ||
-    (playerSelection === "paper" && computerSelection === "scissor") ||
-    (playerSelection === "scissor" && computerSelection === "rock")
-  ) {
-    setMessage("You Lose! Paper beats rock.");
-    computerScore += 1;
+    setMessage("Stalemate! Repeat!");
   } else if (
     (playerSelection === "rock" && computerSelection === "scissor") ||
     (playerSelection === "paper" && computerSelection === "rock") ||
     (playerSelection === "scissor" && computerSelection === "paper")
   ) {
-    setMessage("You Win! Rock beats scissor");
+    setMessage(`You Win! ${playerSelection} beats ${computerSelection}`);
     playerScore += 1;
+  } else {
+    setMessage(`You Lose! ${computerSelection} beats ${playerSelection}.`);
+    computerScore += 1;
   }
-
+  
   userScoreEl.textContent = `Player: ${playerScore}`;
   computerScoreEl.textContent = `Computer: ${computerScore}`;
 
