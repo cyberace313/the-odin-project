@@ -20,6 +20,18 @@ body {
   line-height: 1.8;
 }
 
+.nav {
+  background-color: #fc906c;
+ border-radius: 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav a {
+  color: #fff;
+}
+
 h1 {
   text-align: center;
   padding: 20px;
